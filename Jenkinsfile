@@ -1,13 +1,17 @@
 pipeline {
     agent any
     
+    environment {
+        TT_SECRET_TEXT=credentials('tt-secret-text')
+    }
+    
     tools {
         terraform 'jenkins-terraform'
     }
     stages {
         stage ("checkout from GIT") {
             steps {
-                git branch: 'main', credentialsId: 'tt-secrete-text', url: 'https://github.com/aleopinion/CICD-pipeline-1.git'
+                git branch: 'main', url: 'https://github.com/aleopinion/CICD-pipeline-1.git'
             }
         }
         stage ("terraform init") {
