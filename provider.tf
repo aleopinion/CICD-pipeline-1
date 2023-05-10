@@ -1,4 +1,4 @@
 provider "google" {
-  project = "united-night-382023"
+  project = "erudite-variety-386204"
   region  = "us-central1"
 }

@@ -10,7 +10,7 @@ terraform {
 
 # Backend Configuration
   backend "gcs" {
-    bucket  = "opi-state"
+    bucket  = "opi-state1"
     prefix  = "dev/terraform-state"    
   }
 }
