@@ -1,7 +1,6 @@
 pipeline {
     agent any
-    environment {
-        TT_SECRET_TEXT=credentialsId('tt-secret-text')
+
     }
     tools {
         terraform 'jenkins-terraform'
